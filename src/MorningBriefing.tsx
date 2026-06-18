@@ -143,6 +143,13 @@ export default function MorningBriefing() {
     setChecked((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
+  const totalTasks = briefing
+    ? Object.values(briefing).reduce((sum, tasks) => sum + tasks.length, 0)
+    : 6;
+  const completedCount = Object.values(checked).filter(Boolean).length;
+  const progressPct = totalTasks > 0 ? (completedCount / totalTasks) * 100 : 0;
+  const allDone = completedCount === totalTasks && totalTasks > 0;
+
   const today = currentTime.toLocaleDateString('en-IN', {
     weekday: 'long',
     year: 'numeric',
@@ -177,6 +184,32 @@ export default function MorningBriefing() {
           <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
           Refresh
         </button>
+      </div>
+
+      {/* Progress Bar */}
+      <div className="mb-5">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-xs text-gray-400">
+            {completedCount} of {totalTasks} tasks completed today
+          </span>
+          <span className="text-xs text-gray-500">{Math.round(progressPct)}%</span>
+        </div>
+        <div className="w-full h-2 rounded-full bg-dark-bg overflow-hidden">
+          <div
+            className="h-full rounded-full transition-all duration-500 ease-out"
+            style={{
+              width: `${progressPct}%`,
+              background: allDone
+                ? 'linear-gradient(90deg, #10b981, #34d399, #6ee7b7)'
+                : 'linear-gradient(90deg, #8b5cf6, #14b8a6)',
+            }}
+          />
+        </div>
+        {allDone && (
+          <p className="text-sm text-green-400 font-medium mt-2 animate-pulse">
+            🎉 All done for today!
+          </p>
+        )}
       </div>
 
       {/* Agent Sections */}
