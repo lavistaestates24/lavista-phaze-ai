@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import MorningBriefing from './MorningBriefing';
 import {
   Bot,
   Play,
@@ -255,6 +256,8 @@ function App() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Main Content - Left 3 columns */}
           <div className="lg:col-span-3 space-y-6">
+            {/* Auto-Briefing Section */}
+            <MorningBriefing />
             {/* CEO Agent Section */}
             <section className="glow-border-mixed rounded-2xl bg-dark-card p-6">
               <div className="flex items-start justify-between">
