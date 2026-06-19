@@ -14,6 +14,8 @@ const TEAM_MEMBERS = [
   { id: "krutika", name: "Krutika", role: "Tele-calling Lead", team: "calling", callTarget: 20 },
   { id: "vaishali", name: "Vaishali", role: "Inquiry Handler", team: "calling", callTarget: 20 },
   { id: "nisha", name: "Nisha", role: "Outbound Caller", team: "calling", callTarget: 20 },
+  { id: "harsh", name: "Harsh", role: "Outbound Caller", team: "calling", callTarget: 20 },
+  { id: "krunal", name: "Krunal", role: "Outbound Caller", team: "calling", callTarget: 20 },
 ];
 
 const ROLE_PROMPTS: Record<string, string> = {

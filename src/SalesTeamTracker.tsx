@@ -102,6 +102,8 @@ export default function SalesTeamTracker() {
         { id: 'krutika', name: 'Krutika', role: 'Tele-calling Lead', team: 'calling', callTarget: 20, tasks: [{ task: 'Call 20 leads from last week inquiry list', completed: false }, { task: 'Update CRM with 5 new property listings', completed: false }], status: 'not_started' },
         { id: 'vaishali', name: 'Vaishali', role: 'Inquiry Handler', team: 'calling', callTarget: 20, tasks: [{ task: 'Handle incoming inquiries from Google ads', completed: false }, { task: 'Search 5 new rental listings in Bopal area', completed: false }], status: 'not_started' },
         { id: 'nisha', name: 'Nisha', role: 'Outbound Caller', team: 'calling', callTarget: 20, tasks: [{ task: 'Make 20 outbound calls for 3BHK requirements', completed: false }, { task: 'Follow up with yesterday interested prospects', completed: false }], status: 'not_started' },
+        { id: 'harsh', name: 'Harsh', role: 'Outbound Caller', team: 'calling', callTarget: 20, tasks: [{ task: 'Make 20 outbound calls for 2BHK requirements', completed: false }, { task: 'Follow up with today interested prospects', completed: false }], status: 'not_started' },
+        { id: 'krunal', name: 'Krunal', role: 'Outbound Caller', team: 'calling', callTarget: 20, tasks: [{ task: 'Make 20 outbound calls for 1BHK requirements', completed: false }, { task: 'Follow up with interested prospects', completed: false }], status: 'not_started' },
       ]);
     } finally {
       setLoading(false);
