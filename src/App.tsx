@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import MorningBriefing from './MorningBriefing';
+import SalesTeamTracker from './SalesTeamTracker';
 import {
   Bot,
   Play,
@@ -379,6 +380,9 @@ function App() {
                 ))}
               </div>
             </section>
+
+            {/* Sales Team Tracker */}
+            <SalesTeamTracker />
           </div>
 
           {/* Activity Log Sidebar - Right column */}
