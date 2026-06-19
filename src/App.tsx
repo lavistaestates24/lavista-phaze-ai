@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import MorningBriefing from './MorningBriefing';
 import SalesTeamTracker from './SalesTeamTracker';
+import SocialMediaTeamTracker from './SocialMediaTeamTracker';
 import {
   Bot,
   Play,
@@ -383,6 +384,9 @@ function App() {
 
             {/* Sales Team Tracker */}
             <SalesTeamTracker />
+
+            {/* Social Media Team Tracker */}
+            <SocialMediaTeamTracker />
           </div>
 
           {/* Activity Log Sidebar - Right column */}
